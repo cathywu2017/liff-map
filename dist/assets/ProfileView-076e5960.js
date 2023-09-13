@@ -1,1 +1,0 @@
-import{_ as o,o as _,c as s,p as t,a,b as c}from"./index-1db216a2.js";const p=e=>(t("data-v-e7a2337f"),e=e(),a(),e),l={class:"profileBlock"},i=p(()=>c("p",null,"Hello! 以下是您的登入資訊：",-1)),r=[i],d={__name:"ProfileView",setup(e){return(n,f)=>(_(),s("div",l,r))}},h=o(d,[["__scopeId","data-v-e7a2337f"]]);export{h as default};
