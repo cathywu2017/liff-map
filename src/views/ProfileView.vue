@@ -9,7 +9,7 @@ const data = ref({});
 const handleLogout = () => {
   liff.logout();
 
-  router.push({ path: '/liff-map/dist/profile' })
+  router.push({ path: '/liff-map/dist' })
 }
 
 onMounted(() => {
