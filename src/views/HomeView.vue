@@ -1,6 +1,9 @@
 <script setup>
 import { onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 import liff from '@line/liff';
+
+const router = useRouter();
 
 onMounted(() => {
   liff.init({
@@ -8,11 +11,11 @@ onMounted(() => {
     withLoginOnExternalBrowser: true,
   }).then(() => {
     if (liff.isLoggedIn()) {
-      window.location.replace('https://cathywu2017.github.io/liff-map/dist/profile');
+      router.push({ path: '/liff-map/dist/profile' })
     }
 
     if (!liff.isLoggedIn()) {
-      liff.login({ redirectUri: 'https://cathywu2017.github.io/liff-map/dist/profile' });
+      liff.login({ redirectUri: 'https://cathywu2017.github.io/liff-map/dist' });
     }
   }).catch((err) => {
     console.log(err);

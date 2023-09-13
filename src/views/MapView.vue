@@ -76,7 +76,7 @@ onMounted(() => {
       }
 
       if (!liff.isLoggedIn()) {
-        liff.login();
+        liff.login({ redirectUri: 'https://cathywu2017.github.io/liff-map/dist' });
       }
     })
     .catch((err) => {
