@@ -1,13 +1,15 @@
 <script setup>
 import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 import liff from '@line/liff';
 
+const router = useRouter();
 const data = ref({});
 
 const handleLogout = () => {
   liff.logout();
 
-  location.reload();
+  router.push({ path: '/liff-map/dist/profile' })
 }
 
 onMounted(() => {

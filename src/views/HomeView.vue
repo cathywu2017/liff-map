@@ -11,7 +11,7 @@ onMounted(() => {
     withLoginOnExternalBrowser: true,
   }).then(() => {
     if (liff.isLoggedIn()) {
-      router.push({ path: '/liff-map/dist/profile' })
+      router.push({ path: '/liff-map/dist/profile' });
     }
 
     if (!liff.isLoggedIn()) {
